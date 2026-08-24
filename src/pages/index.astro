@@ -1,27 +1,45 @@
----
+--- 
 //'---'' represents the 'Frontmatter' (Typescript)
+
+import ProjectCard from '../components/ProjectCard.astro';
+
 //Below are variables
-const companyName = "Ibberson Studios"
+const companyName = "Ibberson Studios";
 const name = "Luke Ibberson";
 const title = "Computer Science (Games Technology) Developer";
 ---
 
-<html lang="en"> {/**/}
-  <head> {/*Infomation about the webpage (not displayed)*/}
+<html lang="en"> <!-- -->
+  <head> <!-- Infomation about the webpage (not displayed) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{companyName}</title> {/*Browser title*/}
+    <title>{companyName}</title>
   </head>
 
   <body>
     <main>
       <h1>{name}</h1>
-
       <h2>{title}</h2>
+      <!-- <p>Game Developer specializing in mechanics programming and game engines.</p> -->
 
-      <p>
-        Game Developer
-      </p>
+      <section class="projects">
+        <h2>Featured Games</h2>
+
+        <!-- Create a Project using the imported ProjectCard.astro -->
+        <ProjectCard 
+          title="Skull Mania" 
+          engine="Unreal Engine 5 (Blueprints)" 
+          role="Solo Developer" 
+          description="A VR search-and-sort game with a medieval-horror based environment."
+        />
+
+        <ProjectCard 
+          title="VisionBound" 
+          engine="Unreal Engine 5 (Blueprints)" 
+          role="Solo Developer" 
+          description="A VR adaptation of Visual Restitution Therapy - FINAL YEAR PROJECT"
+        />
+      </section>
     </main>
   </body>
 </html>
@@ -40,20 +58,10 @@ const title = "Computer Science (Games Technology) Developer";
     padding: 80px 40px;
   }
 
-  h1 {
-    font-size: 64px;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 28px;
-    font-weight: normal;
-    color: #aaa;
-  }
-
-  p {
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 600px;
+  h1 { font-size: 64px; margin-bottom: 10px; }
+  h2 { font-size: 28px; font-weight: normal; color: #aaa; }
+  
+  .projects {
+    margin-top: 60px;
   }
 </style>
