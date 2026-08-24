@@ -1,17 +1,59 @@
 ---
-
+//'---'' represents the 'Frontmatter' (Typescript)
+//Below are variables
+const companyName = "Ibberson Studios"
+const name = "Luke Ibberson";
+const title = "Computer Science (Games Technology) Developer";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="en"> {/**/}
+  <head> {/*Infomation about the webpage (not displayed)*/}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{companyName}</title> {/*Browser title*/}
+  </head>
+
+  <body>
+    <main>
+      <h1>{name}</h1>
+
+      <h2>{title}</h2>
+
+      <p>
+        Game Developer
+      </p>
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #111;
+    color: white;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #aaa;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+</style>
