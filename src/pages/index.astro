@@ -1,67 +1,38 @@
---- 
-//'---'' represents the 'Frontmatter' (Typescript)
-
+---
+import MainLayout from '../layouts/MainLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-
-//Below are variables
-const companyName = "Ibberson Studios";
-const name = "Luke Ibberson";
-const title = "Computer Science (Games Technology) Developer";
 ---
 
-<html lang="en"> <!-- -->
-  <head> <!-- Infomation about the webpage (not displayed) -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{companyName}</title>
-  </head>
+<MainLayout title="Ibberson Studios">
+  <section class="hero">
+    <h1>Luke Ibberson</h1>
+    <h2>Computer Science (Games Technology) Developer</h2>
+    <!-- <p></p> -->
+  </section>
 
-  <body>
-    <main>
-      <h1>{name}</h1>
-      <h2>{title}</h2>
-      <!-- <p>Game Developer specializing in mechanics programming and game engines.</p> -->
-
-      <section class="projects">
-        <h2>Featured Games</h2>
-
-        <!-- Create a Project using the imported ProjectCard.astro -->
-        <ProjectCard 
-          title="Skull Mania" 
-          engine="Unreal Engine 5 (Blueprints)" 
-          role="Solo Developer" 
-          description="A VR search-and-sort game with a medieval-horror based environment."
-        />
-
-        <ProjectCard 
-          title="VisionBound" 
-          engine="Unreal Engine 5 (Blueprints)" 
-          role="Solo Developer" 
-          description="A VR adaptation of Visual Restitution Therapy - FINAL YEAR PROJECT"
-        />
-      </section>
-    </main>
-  </body>
-</html>
+  <section class="projects">
+    <h3>Featured Projects</h3>
+    <ProjectCard 
+      title="Unreal Engine Physics Game" 
+      engine="Unreal Engine 5 (C++)" 
+      role="Gameplay Programmer" 
+      description="A custom vehicle physics simulation featuring dynamic deformation and raycast suspension."
+    />
+    <ProjectCard 
+      title="Procedural Dungeon Crawler" 
+      engine="Unity (C#)" 
+      role="Solo Developer" 
+      description="Built a grid-based dungeon generator using Wave Function Collapse and custom pathfinding AI."
+    />
+  </section>
+</MainLayout>
 
 <style>
-  body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #111;
-    color: white;
+  .hero {
+    margin-bottom: 40px;
   }
-
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 80px 40px;
-  }
-
-  h1 { font-size: 64px; margin-bottom: 10px; }
-  h2 { font-size: 28px; font-weight: normal; color: #aaa; }
-  
-  .projects {
-    margin-top: 60px;
-  }
+  h1 { font-size: 48px; margin-bottom: 8px; color: #fff; }
+  h2 { font-size: 22px; font-weight: normal; color: #cd62ff; margin-top: 0; }
+  h3 { font-size: 24px; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+  /* p { font-size: 18px; color: #ccc; max-width: 600px; } */
 </style>

@@ -1,0 +1,120 @@
+---
+//Props are parameters passed into this script when you use it.
+interface Props {
+  title: string;
+}
+
+//Destructure - a shorthand from Astro to use in another file
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser title -->
+    <title>{title}</title>
+  </head>
+  
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">Ibberson Studios</a>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <!-- slot serves as a placeholder for MainLayout -->
+         <!-- Any content placed in a MainLayout tag in another file will go here -->    
+      <slot />
+    </main>
+
+    <footer>
+      <!-- &copy = copyright symbol -->  
+      <p>&copy; 2026 Ibberson Studios. Built with Astro & TypeScript.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #111;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    background: #181818;
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+
+  /* Main Content Wrapper */
+  main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1; /* Pushes footer to the bottom */
+  }
+
+  /* Footer Styles */
+  footer {
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    background: #181818;
+  }
+</style>
