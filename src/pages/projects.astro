@@ -1,7 +1,14 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 <MainLayout title="Ibberson Studios | Projects">
   <h1>All Projects</h1>
-  <p>Filterable grid of games and engine tools coming soon...</p>
+  <ProjectCard 
+      title="Unreal Engine Physics Game" 
+      engine="Unreal Engine 5 (C++)" 
+      role="Gameplay Programmer" 
+      description="A custom vehicle physics simulation featuring dynamic deformation and raycast suspension."
+      slug = "skull-mania"
+    />
 </MainLayout>
