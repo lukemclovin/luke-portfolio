@@ -13,7 +13,7 @@ export async function getStaticPaths() {
       engine: 'Unreal Engine 5 (Blueprints)',
       role: 'Solo Developer',
       overview: 'A search-and-sort VR game with a medievil-horror environment, featuring realistic physics and dynamic object interactions.',
-      tech: ['C++', 'Unreal Engine 5', 'Chaos Physics'],
+      tech: ['C++', 'Unreal Engine 5', 'VR'],
       link: 'https://sidequestvr.com/app/54339/skull-mania',
       linkString: 'Download from SideQuest',
       trailerUrl: '/media/skull-mania-mixed-reality-trailer-compressed.mp4',
@@ -24,22 +24,20 @@ export async function getStaticPaths() {
         '/media/skull-mania-room.png',
       ]
     },
-    // {
-    //   slug: 'vision-bound',
-    //   title: 'Procedural Dungeon Crawler',
-    //   engine: 'Unity (C#)',
-    //   role: 'Solo Developer',
-    //   overview: 'A top-down action game featuring procedurally generated level layouts based on the Wave Function Collapse algorithm.',
-    //   tech: ['C#', 'Unity', 'A* Pathfinding'],
-    //   link: 'https://github.com/yourusername/project',
-    //   linkString: 'View on GitHub',
-    //   trailerUrl: '/media/skull-mania-mixed-reality-trailer.mp4',
-    //     screenshots: [
-    //       '/media/skullManiaFirstDoor.png',
-    //       '/media/skullManiaGoldenSkull.png',
-    //       '/media/skull-mania-scooped-skulls.png',
-    //     ]
-    // },
+    {
+      slug: 'vision-bound',
+      title: 'VisionBound',
+      engine: 'Unreal Engine 5 (Blueprints)',
+      role: 'Solo Developer',
+      overview: 'A VR adaptation of Visual Resitution Therapy, designed to mitigate the effects of compensatory head movement and lack of accessibilty observed in clinical treatments.',
+      tech: ['C++', 'Unreal Engine 5', 'VR'],
+      link: 'https://sidequestvr.com/app/59959/visionbound',
+      linkString: 'Download from SideQuest',
+      trailerUrl: '/media/skull-mania-mixed-reality-trailer.mp4',
+        screenshots: [
+          '/media/skullManiaFirstDoor.png',
+        ]
+    },
   ];
 
   return projects.map((project) => ({
@@ -126,7 +124,6 @@ const { project } = Astro.props;
   
   .btn:hover { background: #4338ca; }
 
-  /* Video Player Styling */
   .video-wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -142,7 +139,6 @@ const { project } = Astro.props;
     margin: 0 auto;
   }
 
-  /* Screenshot Gallery Styling */
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -169,7 +165,7 @@ const { project } = Astro.props;
     border-color: #818cf8;
   }
 
-  /* Optional: Automatically drops to 1 column on mobile screens so images don't get squished */
+  /* gallery becomes 1 column on mobile */
   @media (max-width: 600px) {
     .gallery {
       grid-template-columns: 1fr;

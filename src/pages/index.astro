@@ -6,9 +6,10 @@ import ProjectCard from '../components/ProjectCard.astro';
 <MainLayout title="Ibberson Studios">
   <section class="hero">
     <img src="/logos/ibberson-studios-logo-topbottom.png" alt="Ibberson Studios Logo" class="hero-logo" />
-    <h1>Luke Ibberson</h1>
-    <h2>Computer Science (Games Technology) Developer</h2>
-    <!-- <p></p> -->
+    <!-- <h1>Luke Ibberson</h1> -->
+    <h2>Game & Software Developer | Computer Science (Games Technology) Graduate</h2>
+    <p>I create interactive software across Unreal Engine, Unity, and Android, with experience in Blueprints, C#, and Java. My projects include VR applications, games, mobile software, accessibility-focused experiences, and this website.</p>
+    <p>I enjoy solving technical problems, learning new technologies, and building software that has a meaningful impact on its users.</p>
   </section>
 
   <section class="projects">
@@ -20,13 +21,18 @@ import ProjectCard from '../components/ProjectCard.astro';
       description="A search-and-sort VR game with a medievil-horror environment, featuring realistic physics and dynamic object interactions."
       slug = "skull-mania"
     />
-    <!-- <ProjectCard 
-      title="Procedural Dungeon Crawler" 
-      engine="Unity (C#)" 
-      role="Solo Developer" 
-      description="Built a grid-based dungeon generator using Wave Function Collapse and custom pathfinding AI."
-      slug = "vision-bound"
-    /> -->
+  </section>
+
+  <section class="skills">
+    <h3>Skills</h3>
+    <h4>Languages & Scripting</h4>
+    <p1>C#, Java, Blueprints, Typescript, HTML, CSS</p1>
+    <h4>Game Engines</h4>
+    <p1>Unreal Engine 5, Unity 6</p1>
+    <h4>Tools & Environments</h4>
+    <p1>GitHub, Visual Studio, VS Code, Android Studio, Processing, Da Vinci Resolve, 3ds Max, Blender</p1>
+    <h4>Technologies</h4>
+    <p1>VR, AI-Assisted Development, 3D Asset Creation</p1>
   </section>
 </MainLayout>
 
@@ -45,9 +51,13 @@ import ProjectCard from '../components/ProjectCard.astro';
   
   h1 { font-size: 48px; margin-bottom: 8px; color: #fff; }
   
-  h2 { font-size: 22px; font-weight: normal; color: #818cf8; margin-top: 0; }
+  h2 { font-size: 22px; font-weight: normal; color: #818cf8; margin-top: 20px; text-align: center; }
   
   h3 { font-size: 24px; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+
+  h4 { font-size: 20px; color: #818cf8; margin-top: 20px; }
   
-  /* p { font-size: 18px; color: #ccc; max-width: 600px; } */
+  p { font-size: 18px; color: #ccc; max-width: auto; text-align: center; }
+
+  p1 { font-size: 18px; color: #ccc; max-width: auto; }
 </style>
