@@ -63,6 +63,11 @@ const { project } = Astro.props;
       <p class="meta"><strong>Engine:</strong> {project.engine} | <strong>Role:</strong> {project.role}</p>
     </header>
 
+    <section class="section">
+      <h2>Overview</h2>
+      <p>{project.overview}</p>
+    </section>
+
     {project.trailerUrl && (
       <section class="section video-section">
         <h2>Trailer</h2>
@@ -76,8 +81,10 @@ const { project } = Astro.props;
     )}
 
     <section class="section">
-      <h2>Overview</h2>
-      <p>{project.overview}</p>
+      <h2>Technologies Used</h2>
+      <ul class="tech-list">
+        {project.tech.map((item) => <li>{item}</li>)}
+      </ul>
     </section>
 
     {project.screenshots && project.screenshots.length > 0 && (
@@ -92,13 +99,6 @@ const { project } = Astro.props;
         </div>
       </section>
     )}
-
-    <section class="section">
-      <h2>Technologies Used</h2>
-      <ul class="tech-list">
-        {project.tech.map((item) => <li>{item}</li>)}
-      </ul>
-    </section>
 
     <section class="section">
       <h2>Code & Downloads</h2>
@@ -126,14 +126,14 @@ const { project } = Astro.props;
   
   .btn:hover { background: #4338ca; }
 
-  <!-- Video Player Styling -->
+  /* Video Player Styling */
   .video-wrapper {
     max-width: 800px;
     margin: 0 auto;
   }
 
   .video-wrapper video {
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 8px;
     border: 1px solid #333;
@@ -142,11 +142,10 @@ const { project } = Astro.props;
     margin: 0 auto;
   }
 
-  <!-- Screenshot Gallery Styling -->
+  /* Screenshot Gallery Styling */
   .gallery {
     display: grid;
-    /* Fixed 3-column layout on desktop */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
     margin-top: 12px;
   }
