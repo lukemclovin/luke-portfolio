@@ -2,6 +2,115 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 <MainLayout title="Ibberson Studios | About">
-  <h1>About Me</h1>
-  <p>Background, degree modules, skills, and CV details coming soon...</p>
+  <img src="/logos/ibberson-studios-logo-topbottom.png" alt="Ibberson Studios Logo" class="hero-logo" />
+  
+  <h1>About</h1>
+
+  <p>View my LinkedIn profile for any more professional/career information:</p>
+  <a 
+    href="https://www.linkedin.com/in/luke-ibberson-b7a503387/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="social-btn linkedin-btn"
+  >
+    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+    </svg>
+    <span>LinkedIn</span>
+  </a>
+
+  <p>Watch the trailers for my projects on the Ibberson Studios YouTube channel:</p>
+  <a 
+    href="https://www.youtube.com/channel/UCdgebr0VQTBzMkcCWBiD5ag" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="social-btn youtube-btn"
+  >
+    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+    <span>YouTube</span>
+  </a>
+
+  <p>Download Ibberson Studios' VR games from SideQuest:</p>
+  <a 
+    href="https://sidequestvr.com/user/4642341" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="social-btn sidequest-btn"
+  >
+  <!-- <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.44 2.05c-.32 0-.64.08-.92.24L3.6 6.81a1.85 1.85 0 0 0-.92 1.6v9.18c0 .66.35 1.26.92 1.6l7.92 4.52c.56.32 1.27.32 1.84 0l7.92-4.52c.57-.34.92-.94.92-1.6V8.41c0-.66-.35-1.26-.92-1.6l-7.92-4.52a1.85 1.85 0 0 0-.92-.24zm-2.88 5.61h4.88c1.62 0 2.93 1.31 2.93 2.93 0 1.62-1.31 2.93-2.93 2.93h-1.95v4.88h-2.93V7.66zm2.93 2.93v2.93h1.95a1.465 1.465 0 0 0 0-2.93h-1.95z"/>
+  </svg> -->
+    <span>SideQuest</span>
+  </a>
+
 </MainLayout>
+
+<style>
+  .hero-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 16px;
+    display: block;
+    margin: auto;
+  }
+
+  p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: auto;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    color: #e4e4e7;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-2px);
+    background-color: #27272a;
+  }
+
+  .linkedin-btn:hover {
+    border-color: #0a66c2;
+    color: #60a5fa;
+  }
+
+  .youtube-btn:hover {
+    border-color: #ff0000;
+    color: #f87171;
+  }
+
+  .sidequest-btn:hover {
+    border-color: #ff00d9;
+    color: #ff00d9;
+  }
+
+  .social-btn:active {
+    transform: translateY(0);
+  }
+</style>
