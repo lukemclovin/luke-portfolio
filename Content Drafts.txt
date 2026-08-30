@@ -1,3 +1,29 @@
 Skull Mania
+
 Overview:
 In Skull Mania, you begin with 3 switches in front of you. You must activate these switches to open the locked door ahead. The rooms that surround you are full of skulls. Find the item you need from each room to activate the switches, open the door, and escape! Ramp up the difficulty in Level 2 where you must also kill the music coming from one the rooms!
+
+Key feature 1: Spatialised Audio
+Sound cues can be found throughout the game, such as the speaker cube from Level 2 or the torches found on the walls. The sound emitting from these game objects is localized and appropriate for the item. For instance, the music coming from the speaker will get louder as the player gets closer to it, providing a clue as to where it can be found.
+
+Key feature 2: Grab Mechanics
+Skull Mania relies on grab mechanics using the VR motion controller. The player can grab items directly or use tools such as the scooper to move and sort through a big pile, bringing the item to an easier position.
+
+Key feature 3: Wrist-mounted widgets
+A ‘Hints’ widget can be optionally viewed from the player’s left wrist that will update with clues as you move throughout the level. The main menu can be accessed from the right wrist allowing for easy access to level loading and reloading.
+
+
+
+VisionBound
+
+Overview:
+VisionBound is a proof of concept Virtual Reality adaptation of Visual Restitution Therapy (VRT), a therapy designed to help restore lost areas of a person's visual field. In VRT, bright visual stimuli are shown one by one along the border of the person's visual field while they focus on a central point. VisionBound uses head tracking to reduce the effect of compensatory head movements when scanning for the stimuli and provides a larger area than a computer screen for the stimuli to spawn in.
+
+Key feature 1: Calibration Sequence
+The user can calibrate their visual field by providing an input when they can no longer see a calibration point which moves in the left, right, up, and down direction from a central focus point. 
+
+Key feature 2: Stimulus Spotting Sequence
+The user's intact-defect border of their visual field which extends the least will be calculated from calibration, and visual stimuli will spawn along this border. This, in theory, will help to restore this part of the user's visual field.
+
+Key Feature 3: Customization
+To make the process more fun, the user can choose what their focus point looks like, the point where they will keep their gaze throughout the process. For instance, they can choose a 'skull and bones', making sure the skull stays aligned with the bones.

@@ -47,7 +47,27 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style>
+<style is:global>
+  /* Ensure padding is included inside element widths globally */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    max-width: 1100px; /* Or whatever maximum width you prefer for your content */
+    margin: 0 auto;    /* Centers main content */
+    padding: 0 16px;   /* Adds side padding so content never touches display edges */
+    box-sizing: border-box;
+  }
   .hero-logo {
     width: 200px;
     height: auto;
