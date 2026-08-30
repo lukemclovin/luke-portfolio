@@ -15,6 +15,7 @@ export async function getStaticPaths() {
       role: 'Solo Developer',
       overview: 'In Skull Mania, you begin with 3 switches in front of you. You must activate these switches to open the locked door ahead. The rooms that surround you are full of skulls. Find the item you need from each room to activate the switches, open the door, and escape! Ramp up the difficulty in Level 2 where you must also kill the music coming from one the rooms!',
       trailerUrl: '/media/skull-mania-mixed-reality-trailer-compressed.mp4',
+      trailerThumbnail: '/media/skull-mania-thumbnail.JPG',
       linkString: 'Download from SideQuest',
       link: 'https://sidequestvr.com/app/54339/skull-mania',
       screenshots: [
@@ -24,6 +25,50 @@ export async function getStaticPaths() {
         '/media/skull-mania-speaker-cube.png',
         '/media/skullManiaGoldenSkull.png',
         '/media/skull-mania-main-menu.png',
+      ],
+      keyFeature1: 'Spatialized Audio',
+      keyFeature1Overview: [
+        'Sound cues can be found throughout the game, such as the speaker cube from Level 2 or the torches found on the walls. The sound emitting from these game objects is localized and appropriate for the item. For instance, the music coming from the speaker will get louder as the player gets closer to it, providing a clue as to where it can be found. ', 
+      ],
+      keyFeature2: 'Grab Mechanics',
+      keyFeature2Overview: [
+        'Skull Mania relies on grab mechanics using the VR motion controller. The player can grab items directly or use tools such as the scooper to move and sort through a big pile, bringing the item to an easier position.  '
+      ],
+      keyFeature3: 'Wrist-mounted Widgets ',
+      keyFeature3Overview: [
+        'A ‘Hints’ widget can be optionally viewed from the player’s left wrist that will update with clues as you move throughout the level. The main menu can be accessed from the right wrist allowing for easy access to level loading and reloading. '
+      ],
+      // challenge1: 'Technical Challenge 1',
+      // challenge1Overview: [
+      //   'Technical Challenge 1 overview point 1.',
+      // ],
+      // challenge2: '',
+      // challenge2Overview: [
+
+      // ],
+      // challenge3: '',
+      // challenge3Overview: [
+
+      // ],
+    },
+    {
+      slug: 'vision-bound',
+      title: 'VisionBound',
+      tagline: 'Find the edge of what you can see...',
+      techStack: 'VR, UE5.6, Blueprints, Android Studio',
+      role: 'Solo Developer',
+      overview: 'In Skull Mania, you begin with 3 switches in front of you. You must activate these switches to open the locked door ahead. The rooms that surround you are full of skulls. Find the item you need from each room to activate the switches, open the door, and escape! Ramp up the difficulty in Level 2 where you must also kill the music coming from one the rooms!',
+      trailerUrl: '/media/visionBound/vision-bound-trailer-compressed.mp4',
+      trailerThumbnail: '/media/visionBound/vision-bound-thumbnail.JPG',
+      linkString: 'Download from SideQuest',
+      link: 'https://sidequestvr.com/app/59959/visionbound',
+      screenshots: [
+        '/media/visionBound/vision-bound-visual-stimulus-skull.jpeg',
+        '/media/visionBound/vision-bound-calibration-point-left-skull.jpeg',
+        '/media/visionBound/vision-bound-visual-stimulus-sphere.jpeg',
+        '/media/visionBound/vision-bound-main-menu.jpeg',
+        '/media/visionBound/vision-bound-results.jpeg',
+        '/media/visionBound/vision-bound-customization.jpeg',
       ],
       keyFeature1: 'Spatialized Audio',
       keyFeature1Overview: [
@@ -83,7 +128,7 @@ const { project } = Astro.props;
       <section class="section video-section">
         <h2>Trailer</h2>
         <div class="video-wrapper">
-          <video controls poster={project.screenshots?.[0]}, preload="metadata" playsinline>
+          <video controls poster={project.trailerThumbnail}, preload="metadata" playsinline>
             <source src={project.trailerUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
