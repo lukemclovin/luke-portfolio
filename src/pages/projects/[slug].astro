@@ -97,6 +97,51 @@ export async function getStaticPaths() {
       // ],
       disclaimer: 'This application is the product of an academic research project, and does not guarantee the restoration of one’s visual field.'
     },
+    {
+      slug: 'house-checks',
+      title: 'House Checks',
+      tagline: 'Make sure everything is sorted before you go to bed...',
+      techStack: 'Unity 6, C#',
+      role: 'Solo Developer',
+      overview: 'Have you switched all the lights off? Locked the front door? Turned your PC off? House Checks is a 2D, top-down Serious Game aimed at enforcing an evening routine. It features an accessibility-focused, cyclic UI with a one-button input system. You must move from room to room, make sure your house is safe and secure, and earn your sleep.',
+      trailerUrl: '/media/houseChecks/house-checks-trailer.mp4',
+      trailerThumbnail: '/media/houseChecks/house-checks-thumbnail.png',
+      linkString: 'Download currently unavailable',
+      link: '',
+      screenshots: [
+        '/media/houseChecks/house-checks-screenshot1.png',
+        '/media/houseChecks/house-checks-screenshot2.png',
+        '/media/houseChecks/house-checks-screenshot3.png',
+        '/media/houseChecks/house-checks-screenshot4.png',
+        '/media/houseChecks/house-checks-screenshot5.png',
+        '/media/houseChecks/house-checks-screenshot6.png',
+      ],
+      keyFeature1: 'Cyclic UI',
+      keyFeature1Overview: [
+        'Actions are controlled through a UI that cycles at a controlled, steady rate, with distinct color changes and sound cues. This gives the user time to consider which action to take, and welcomes a wider player audience through accessibility.', 
+      ],
+      keyFeature2: 'One-button Input System',
+      keyFeature2Overview: [
+        'House Checks has been designed around a one-button input system. The input can be mapped to any key, accessibility switch, used as a left mouse click or on touchscreen.'
+      ],
+      keyFeature3: '',
+      keyFeature3Overview: [
+        
+      ],
+      // challenge1: 'Technical Challenge 1',
+      // challenge1Overview: [
+      //   'Technical Challenge 1 overview point 1.',
+      // ],
+      // challenge2: '',
+      // challenge2Overview: [
+
+      // ],
+      // challenge3: '',
+      // challenge3Overview: [
+
+      // ],
+      disclaimer: '',
+    },
   ];
 
   return projects.map((project) => ({
@@ -130,7 +175,7 @@ const { project } = Astro.props;
       <section class="section video-section">
         <h2>Trailer</h2>
         <div class="video-wrapper">
-          <video controls poster={project.trailerThumbnail}, preload="metadata" playsinline>
+          <video controls poster={project.trailerThumbnail}, preload="metadata" playsinline class="trailer-thumbnail">
             <source src={project.trailerUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -239,6 +284,14 @@ const { project } = Astro.props;
     background: #000;
     display: block;
     margin: 0 auto;
+  }
+
+  .trailer-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;      /* Forces a universal video player proportion */
+    object-fit: cover;         /* Scales poster images to fill the player without stretching */
+    border-radius: 8px;        /* Optional: matches modern card styling */
+    background-color: #000;    /* Prevents white flashes while loading */
   }
 
   .gallery {
