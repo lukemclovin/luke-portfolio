@@ -27,3 +27,16 @@ The user's intact-defect border of their visual field which extends the least wi
 
 Key Feature 3: Customization
 To make the process more fun, the user can choose what their focus point looks like, the point where they will keep their gaze throughout the process. For instance, they can choose a 'skull and bones', making sure the skull stays aligned with the bones.
+
+
+
+House Checks
+
+Overview:
+Have you switched all the lights off? Locked the front door? Turned your PC off? House Checks is a 2D, top-down Serious Game aimed at enforcing an evening routine. It features an accessibility-focused, cyclic UI with a one-button input system. You must move from room to room, make sure your house is safe and secure, and earn your sleep.
+
+Key Feature 1: Cyclic UI
+Actions are controlled through a UI that cycles at a controlled, steady rate, with distinct color changes and sound cues. This gives the user time to consider which action to take, and welcomes a wider player audience through accessibility. 
+
+Key feature 2: One-button Input System
+House Checks has been designed around a one-button input system. The input can be mapped to any key, accessibility switch, used as a left mouse click or on touchscreen. 
