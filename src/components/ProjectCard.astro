@@ -3,14 +3,14 @@
 //Props are parameters passed into this component when you use it.
 interface Props {
   title: string;
-  engine: string;
+  techStack: string;
   role: string;
   description: string;
   slug: string; // Added slug prop
 }
 
 //Destructure - a shorthand from Astro to use in another file
-const { title, engine, role, description, slug } = Astro.props;
+const { title, techStack, role, description, slug } = Astro.props;
 ---
 
 <!-- HTML Structure -->
@@ -18,7 +18,7 @@ const { title, engine, role, description, slug } = Astro.props;
   <h3>
     <a href={`/projects/${slug}`}>{title}</a>
   </h3>
-  <p class="meta"><strong>Engine:</strong> {engine} | <strong>Role:</strong> {role}</p>
+  <p class="meta"><strong>Tech Stack:</strong> {techStack} | <strong>Role:</strong> {role}</p>
   <p>{description}</p>
   <a href={`/projects/${slug}`} class="details-link">View Project Details &rarr;</a>
 </article>

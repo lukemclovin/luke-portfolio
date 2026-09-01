@@ -40,3 +40,27 @@ Actions are controlled through a UI that cycles at a controlled, steady rate, wi
 
 Key feature 2: One-button Input System
 House Checks has been designed around a one-button input system. The input can be mapped to any key, accessibility switch, used as a left mouse click or on touchscreen. 
+
+
+
+Tairu Shōtotsu
+Overview:
+Ever played the coin gambling game 'Zeni Hajiki' from PlayStation's 'Ghost of Yotei'? This is basically that. Tairu Shōtotsu roughly translates from Japanese to Tile Collision. It's a two-player, 1v1 game where you flick tiles into other tiles for points. Featuring customizable physics parameters allowing you to create chaos!
+
+Key Feature 1:Customizable Physics
+Players can use the sliders on the right of the screen to make live changes to the physics of the game. Such changes include the amount of friction between the tiles and the table, the power of the flick, the level of gravity, and the tiles' mass.
+
+Key Feature 2: Game Parameters
+The game parameters, such as number of points needed to win or number of tiles on the table, can also be changed both before and during a match-up.
+
+
+
+ForReel
+Overview:
+ForReel is an Android-native mobile app where you can search for films and find out where to stream them in the UK. You can also add films to 'Reels', which are similar to playlists on Spotify. Say you're in the mood to watch an Adam Sandler film, just check out your Adam Sandler Reel! Maybe you it's Christmas time and you fancy watching a Christmas classic, take a look in your Christmas Reel!
+
+Key Feature 1: Live API Integration
+ForReel uses an API for film names, posters, overviews, and streaming information. The app updates in real time so the information is always up to date. keeping the homepage fresh with sections like 'Currently Trending'.
+
+Key Feature 2: Firebase
+Firestore has been integrated to store datasets, such as films in a user's Reel, and secure authentication for any user account information.

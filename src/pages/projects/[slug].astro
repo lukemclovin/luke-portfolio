@@ -142,6 +142,51 @@ export async function getStaticPaths() {
       // ],
       disclaimer: '',
     },
+    {
+      slug: 'for-reel',
+      title: 'ForReel',
+      tagline: '',
+      techStack: 'Java, Firebase, Android Studio',
+      role: 'Solo Developer',
+      overview: 'ForReel is an Android-native mobile app where you can search for films and find out where to stream them in the UK. You can also add films to \'Reels\', which are similar to playlists on Spotify. Say you\'re in the mood to watch an Adam Sandler film, just check out your Adam Sandler Reel! Maybe you it\'s Christmas time and you fancy watching a Christmas classic, take a look in your Christmas Reel!',
+      trailerUrl: '/media/forReel/for-reel-trailer-compressed.mp4',
+      trailerThumbnail: '/media/forReel/for-reel-thumbnail.png',
+      linkString: 'Unavailable',
+      link: '',
+      screenshots: [
+        '/media/forReel/for-reel-login.png',
+        '/media/forReel/for-reel-homepage.png',
+        '/media/forReel/for-reel-search.png',
+        '/media/forReel/for-reel-film-page.png',
+        '/media/forReel/for-reel-reel-list.png',
+        '/media/forReel/for-reel-reel-page.png',
+      ],
+      keyFeature1: 'Live API Integration',
+      keyFeature1Overview: [
+        'ForReel uses an API for film names, posters, overviews, and streaming information. The app updates in real time so the information is always up to date. keeping the homepage fresh with sections like \'Currently Trending\'.', 
+      ],
+      keyFeature2: 'Firebase',
+      keyFeature2Overview: [
+        'Firestore has been integrated to store datasets, such as films in a user\'s Reel, and secure authentication for any user account information.'
+      ],
+      keyFeature3: '',
+      keyFeature3Overview: [
+        
+      ],
+      // challenge1: 'Technical Challenge 1',
+      // challenge1Overview: [
+      //   'Technical Challenge 1 overview point 1.',
+      // ],
+      // challenge2: '',
+      // challenge2Overview: [
+
+      // ],
+      // challenge3: '',
+      // challenge3Overview: [
+
+      // ],
+      disclaimer: '',
+    },
   ];
 
   return projects.map((project) => ({
